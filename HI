@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <title>שוק ההון למתחילים – הכסף החכם</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h1>קורס שוק ההון למתחילים</h1>
+    <h2>במחיר מיוחד של 500 ₪ במקום 1200 ₪</h2>
+    <button onclick="goToStep(1)">להתחלת הקורס</button>
+  </div>
+
+  <div id="course" class="hidden">
+    <div id="step-1" class="step">
+      <h2>שלב 1: איך שוק ההון עובד?</h2>
+      <p>שוק ההון הוא מקום שבו אנשים קונים ומוכרים מניות, אג"ח ונכסים פיננסיים אחרים...</p>
+      <button onclick="goToStep(2)">המשך לשלב הבא</button>
+    </div>
+
+    <div id="step-2" class="step hidden">
+      <h2>שלב 2: איך מתחילים להשקיע?</h2>
+      <p>צריך חשבון מסחר, הבנה בסיסית, והכרת הסיכונים והאפשרויות...</p>
+      <button onclick="goToStep(3)">המשך לשלב הבא</button>
+    </div>
+
+    <div id="step-3" class="step hidden">
+      <h2>שלב 3: אסטרטגיות מסחר חכמות</h2>
+      <p>כאן נלמד על ניתוח טכני, ניהול סיכונים, ואיך לבחור מניות נכונות...</p>
+      <button onclick="endCourse()">סיום</button>
+    </div>
+  </div>
+</body>
+</html>
