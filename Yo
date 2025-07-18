@@ -1,0 +1,14 @@
+function goToStep(stepNumber) {
+  document.querySelector(".container").classList.add("hidden");
+  document.getElementById("course").classList.remove("hidden");
+
+  const steps = document.querySelectorAll(".step");
+  steps.forEach(step => step.classList.add("hidden"));
+
+  const currentStep = document.getElementById(`step-${stepNumber}`);
+  if (currentStep) currentStep.classList.remove("hidden");
+}
+
+function endCourse() {
+  alert("כל הכבוד! סיימת את הקורס 🎉");
+}
