@@ -1,0 +1,25 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const steps = document.querySelectorAll(".step");
+  const container = document.querySelector(".container");
+  const course = document.getElementById("course");
+
+  function showStep(stepNumber) {
+    steps.forEach(step => step.classList.add("hidden"));
+    const currentStep = document.getElementById(`step-${stepNumber}`);
+    if (currentStep) {
+      currentStep.classList.remove("hidden");
+    }
+  }
+
+  window.goToStep = function (stepNumber) {
+    container.classList.add("hidden");
+    course.classList.remove("hidden");
+    showStep(stepNumber);
+  };
+
+  window.endCourse = function () {
+    course.classList.add("hidden");
+    alert("כל הכבוד! סיימת את הקורס 🎉");
+    container.classList.remove("hidden");
+  };
+});
